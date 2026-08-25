@@ -27,7 +27,7 @@ body {
   font-size: 1.02rem;
 }
 a { color: inherit; }
-h1, h2 { font-family: "IBM Plex Sans", sans-serif; font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+h1, h2, .wm { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin: 0; }
 p { margin: 0; }
 .skip { position: absolute; left: 0.7rem; top: -3rem; background: var(--navy); color: var(--paper); padding: 0.4rem 0.7rem; }
 .skip:focus { top: 0.5rem; }
@@ -109,7 +109,7 @@ nav a:hover { color: var(--paper); }
   align-items: center;
   justify-content: center;
   transform: rotate(-8deg);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Oswald", sans-serif;
   letter-spacing: 0.08em;
   background: rgba(246,241,228,0.9);
 }
@@ -160,24 +160,8 @@ h1 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); max-width: 18ch; }
 }
 .route-list li {
   border-top: 1px solid var(--rule);
-  padding: 0.65rem 0 0.65rem 7.5rem;
-  position: relative;
+  padding: 0.65rem 0;
   font-size: 0.98rem;
-}
-.route-list li:nth-child(1)::before { content: "SITE WALK"; }
-.route-list li:nth-child(2)::before { content: "BUDGET"; }
-.route-list li:nth-child(3)::before { content: "PLANS"; }
-.route-list li:nth-child(4)::before { content: "HOA / CITY"; }
-.route-list li:nth-child(5)::before { content: "PERMIT"; }
-.route-list li:nth-child(6)::before { content: "BUILD"; }
-.route-list li::before {
-  position: absolute;
-  left: 0;
-  top: 0.75rem;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--stamp);
 }
 
 .mission {
@@ -271,5 +255,4 @@ form .btn { justify-self: start; }
   nav { display: none; }
   .staff-grid, .spec, form { grid-template-columns: 1fr; }
   .tm-stamp { position: static; margin: 0 0 0.8rem auto; }
-  .route-list li { padding-left: 0; padding-top: 1.4rem; }
 }
