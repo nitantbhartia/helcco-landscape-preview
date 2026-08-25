@@ -8,13 +8,12 @@ const I18N = {
     navStaff: "Staff",
     navJob: "Consult",
     docline: "TRANSMITTAL · CITY PERMIT & HOA SUBMITTAL",
-    to: "TO",
-    toVal: "City Planning / HOA Architectural Committee",
+    licLbl: "LIC",
     from: "FROM",
     re: "RE",
-    reVal: "Hardscape & landscape drawings — permit set",
+    reVal: "Hardscape & landscape — city permit and HOA submittal",
     h1: "Your vision… let’s build it.",
-    lede: "Family-owned landscape contractor since 1993, serving Southern California. Design and construction throughout San Diego County. Contact lists Vista, CA 92056. The About page also says the company is based out of Oceanside, CA.",
+    lede: "Family-owned landscape contractor since 1993, serving Southern California. Design and construction throughout San Diego County. Vista, CA 92056, and based out of Oceanside, CA.",
     textAppt: "Text an appointment · 760-822-5970",
     callTel: "Call 760-822-5971",
     reply: "We will reach out within 48 hours. You can also text to set up an appointment.",
@@ -49,7 +48,7 @@ const I18N = {
     sp16: "Demolition and dumping",
     sp17: "Leveling and excavating",
     sp18: "Custom gates",
-    staffT: "City permit and HOA submittals — named on the contact sheet",
+    staffT: "The crew",
     stOwn: "Owner",
     stLis: "Project Coordinator",
     stAdi: "Designer / Project Manager",
@@ -92,13 +91,12 @@ const I18N = {
     navStaff: "Equipo",
     navJob: "Consulta",
     docline: "REMISIÓN · PERMISO DE CIUDAD Y ENTREGA HOA",
-    to: "PARA",
-    toVal: "Planeación municipal / Comité de arquitectura HOA",
+    licLbl: "LIC",
     from: "DE",
     re: "ASUNTO",
-    reVal: "Planos de hardscape y paisaje — juego de permiso",
+    reVal: "Hardscape y paisaje — permiso de ciudad y entrega HOA",
     h1: "Su visión… vamos a construirla.",
-    lede: "Contratista de paisaje de familia desde 1993, sirviendo el sur de California. Diseño y construcción en todo el Condado de San Diego. Contacto indica Vista, CA 92056. La página About también dice que la empresa está basada en Oceanside, CA.",
+    lede: "Contratista de paisaje de familia desde 1993, sirviendo el sur de California. Diseño y construcción en todo el Condado de San Diego. Vista, CA 92056, y con base en Oceanside, CA.",
     textAppt: "Textear cita · 760-822-5970",
     callTel: "Llamar 760-822-5971",
     reply: "Respondemos en 48 horas. También puede textarnos para una cita.",
@@ -133,7 +131,7 @@ const I18N = {
     sp16: "Demolición y acarreo",
     sp17: "Nivelación y excavación",
     sp18: "Portones a medida",
-    staffT: "Permiso de ciudad y entregas HOA — nombres en la hoja de contacto",
+    staffT: "El equipo",
     stOwn: "Dueño",
     stLis: "Coordinadora de proyecto",
     stAdi: "Diseñadora / gerente de proyecto",
@@ -213,3 +211,6 @@ if (form) {
     window.location.href = SMS + "?body=" + encodeURIComponent(body);
   });
 }
+
+const printBtn = document.getElementById("print-card");
+if (printBtn) printBtn.addEventListener("click", () => window.print());
