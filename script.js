@@ -3,10 +3,10 @@ const LANG_KEY = "helcco-lang";
 
 const I18N = {
   en: {
-    file: "Landscape permit folder",
+    file: "City Permit & HOA Submittals",
     sinceLine: "Landscape contractor since 1993 · family owned",
     h1: "Your vision… lets build it!",
-    lede: "HELCCO is a licensed landscape construction company based out of Oceanside, CA, with Vista, CA 92056 on the contact page. Design and construction throughout San Diego County. Serving Southern California.",
+    lede: "HELCCO is a licensed landscape construction company based out of Oceanside, CA. Vista, CA 92056. Design and construction throughout San Diego County. Landscape contractor since 1993 serving Southern California.",
     textAppt: "Text 760-822-5970",
     callTel: "Telephone 760-822-5971",
     reply: "We will reach out within 48 hours. You can also text us to set up an appointment 760-822-5970.",
@@ -85,10 +85,10 @@ const I18N = {
     docTitle: "HELCCO Landscape Construction · Vista, CA 92056"
   },
   es: {
-    file: "Carpeta de permiso de paisaje",
+    file: "Permiso de ciudad y entregas HOA",
     sinceLine: "Contratista de paisaje desde 1993 · de familia",
     h1: "Su visión… ¡vamos a construirla!",
-    lede: "HELCCO es una empresa de construcción de paisaje con licencia, con base en Oceanside, CA, y Vista, CA 92056 en la página de contacto. Diseño y construcción en todo el Condado de San Diego. Sirve el sur de California.",
+    lede: "HELCCO es una empresa de construcción de paisaje con licencia, con base en Oceanside, CA. Vista, CA 92056. Diseño y construcción en todo el Condado de San Diego. Contratista de paisaje desde 1993 sirviendo el sur de California.",
     textAppt: "Texto 760-822-5970",
     callTel: "Teléfono 760-822-5971",
     reply: "Respondemos en 48 horas. También puede textarnos para una cita 760-822-5970.",
@@ -202,7 +202,7 @@ if (form) {
     const need = (form.elements.need.value || "").trim();
     const address = (form.elements.address.value || "").trim();
     const details = (form.elements.details.value || "").trim();
-    if (!name || !need) return;
+    if (!name || !need || !address) return;
     let body = "Name: " + name + "\nNeed: " + need;
     if (address) body += "\nAddress: " + address;
     if (details) body += "\nDetails: " + details;
