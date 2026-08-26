@@ -6,59 +6,48 @@
   <title>Leave a review · HELCCO Landscape Construction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Serif:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .rev { max-width: 520px; margin: 1.4rem auto 2rem; padding: 0 var(--pad); }
-    .card { background: var(--paper); border: 1px solid var(--navy); padding: 1.2rem; box-shadow: 4px 4px 0 var(--stamp); }
-    .card h1 { font-size: clamp(1.4rem, 4vw, 1.9rem); margin: 0 0 0.4rem; }
+    .rev { max-width: 520px; margin: 2.6rem auto 2rem; padding: 0 1rem; }
+    .card { background: var(--paper); border: 1px solid var(--navy); padding: 1.2rem; }
+    .card h1 { font-size: clamp(1.4rem, 4vw, 1.9rem); margin: 0.4rem 0; }
     .card img.qr { width: 220px; height: 220px; display: block; margin: 0.9rem auto; background: #fff; }
     .scan { text-align: center; }
     .actions { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-top: 1rem; }
     @media print {
-      .bar, .tools, .lang, .actions { display: none !important; }
+      .lang, .actions { display: none !important; }
       html, body { background: #fff; }
-      .card { box-shadow: none; }
     }
   </style>
 </head>
 <body>
-  <header class="bar">
-    <div class="bar-inner">
-      <a class="wm" href="index.html">HELCCO <span>Landscape Construction</span></a>
-      <div class="tools">
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false">ES</button>
-        </div>
-        <a class="btn navy" href="index.html" data-i18n="back">Back to transmittal</a>
-      </div>
-    </div>
-  </header>
   <main class="rev">
     <div class="card">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
       <h1>HELCCO Landscape Construction</h1>
-      <p>Vista, CA 92056 · C-27 #764626<br>
+      <p>Vista, CA 92056 · Oceanside, CA · C-27 #764626<br>
         <a href="tel:+17608225971">760-822-5971</a> · <span data-i18n="txt">text</span> <a href="sms:+17608225970">760-822-5970</a>
       </p>
       <img class="qr" src="review-qr.svg" width="220" height="220" alt="QR code: Google search for HELCCO Landscape Construction Vista">
       <p class="scan" data-i18n="scan">Scan to find us on Google and leave a review.</p>
       <div class="actions">
         <button type="button" class="btn red" id="print-card" data-i18n="printBtn">Print</button>
-        <a class="btn line" href="index.html" data-i18n="back2">Back to transmittal</a>
+        <a class="btn line" href="index.html" data-i18n="back">Back to the folder</a>
       </div>
     </div>
   </main>
   <script src="script.js"></script>
   <script>
-    I18N.en.back = "Back to transmittal";
-    I18N.en.back2 = "Back to transmittal";
+    I18N.en.back = "Back to the folder";
     I18N.en.txt = "text";
     I18N.en.scan = "Scan to find us on Google and leave a review.";
     I18N.en.printBtn = "Print";
     I18N.en.docTitle = "Leave a review · HELCCO Landscape Construction";
-    I18N.es.back = "Volver a la remisión";
-    I18N.es.back2 = "Volver a la remisión";
+    I18N.es.back = "Volver a la carpeta";
     I18N.es.txt = "texto";
     I18N.es.scan = "Escanee para encontrarnos en Google y dejar una reseña.";
     I18N.es.printBtn = "Imprimir";
