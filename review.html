@@ -6,40 +6,31 @@
   <title>Review card — HELCCO Landscape Construction</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .card {
-      width: min(calc(100% - 1.2rem), 5.05in);
-      margin: 0.85rem auto 1.6rem;
-      background: #f3ead3;
-      border: 1px solid #1e2f4d;
-      padding: 0.85rem 0.8rem 1rem;
-    }
-    .card h1 { font-family: Cinzel, "Times New Roman", serif; font-size: 1.25rem; margin: 0.25rem 0; }
-    .card img { width: 200px; height: 200px; display: block; margin: 0.5rem auto; background: #fff; }
-    .actions { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.55rem; }
-    .actions button, .actions a {
-      background: #1e2f4d; color: #f3ead3; border: 0; padding: 0.4rem 0.6rem;
-      text-decoration: none; cursor: pointer; font-family: "Anonymous Pro", ui-monospace, monospace;
-    }
-    @media print {
-      .lang, .actions { display: none !important; }
-      body { background: #fff; }
-    }
+    .printc { max-width: 5.05in; margin: 1.1rem auto; background: #f3ead3; color: #1a2416; padding: 1rem; border: 8px solid #2f6b3a; }
+    .printc h1 { font-family: "Patua One", Georgia, serif; font-size: 1.35rem; margin: 0 0 0.25rem; }
+    .printc img { width: 200px; height: 200px; display: block; margin: 0.6rem auto; background: #fff; }
+    .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .actions button, .actions a { background: #7a2a14; color: #f3ead3; border: 0; padding: 0.45rem 0.65rem; text-decoration: none; cursor: pointer; font-family: "Anonymous Pro", ui-monospace, monospace; }
+    @media print { .lang, .actions { display: none !important; } body { background: #fff; } }
   </style>
 </head>
 <body>
-  <article class="card">
+  <article class="printc">
     <nav class="lang" aria-label="Language">
       <button type="button" data-set="en" aria-pressed="true">EN</button>
       <button type="button" data-set="es" aria-pressed="false">ES</button>
     </nav>
     <h1>HELCCO Landscape Construction</h1>
     <p>Vista, CA 92056 · Oceanside, CA · C-27 #764626</p>
-    <p><a class="plain" href="tel:+17608225971">760-822-5971</a> · <a class="plain" href="sms:+17608225970">760-822-5970</a></p>
+    <p>Pedro Hernandez<br>
+      <a class="plain" href="tel:+17608225971">760-822-5971</a>
+      · <a class="plain" href="sms:+17608225970">760-822-5970</a>
+    </p>
     <img src="review-qr.svg" width="200" height="200" alt="QR code to HELCCO Landscape Construction on Yelp">
-    <p data-en="Scan to open our Yelp listing and leave a review." data-es="Escanee para abrir nuestro listado de Yelp y dejar una reseña.">Scan to open our Yelp listing and leave a review.</p>
+    <p data-en="Scan to open our Yelp listing and leave a review." data-es="Escanee para abrir nuestra ficha de Yelp y dejar una reseña.">Scan to open our Yelp listing and leave a review.</p>
     <div class="actions">
       <button type="button" id="print-card" data-en="Print this card" data-es="Imprimir esta tarjeta">Print this card</button>
-      <a href="index.html" data-en="Back to the title block" data-es="Volver al recuadro">Back to the title block</a>
+      <a href="index.html" data-en="Back to the lid" data-es="Volver a la tapa">Back to the lid</a>
     </div>
   </article>
   <script src="script.js"></script>
